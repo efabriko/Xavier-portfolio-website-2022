@@ -1,0 +1,484 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+*/
+
+/*
+==================================================
+# CSS VARIABLES #
+==================================================
+*/
+
+
+:root {
+  /* Color */ /* main fonts color */ /* Logo and links */
+
+  /* Color - Buttons */
+
+  /* Color - Illustration Paris */
+
+  /* Font */
+
+  /* Screen width */
+
+}
+
+
+/*
+==================================================
+# GLOBAL / SHARED STYLING #
+==================================================
+*/
+
+* {
+  /* border: 1px solid blue; */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #D1D7DB;
+  color: #1A3144;
+  font-family: 'lato', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  /* Sets the font size to 16px */
+  line-height: 1.6;
+  /* Sets the line-height to 1.6 */
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+  /* color: #00695F; */
+  color: #3677b8;
+}
+
+/* a:visited { */                    /* Removed CSS rule until I found nice color for it */
+  /* visited link */
+  /* color: #05676e; */
+/* } */
+
+a:hover {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+}
+
+/* item element inside a navigation-list block with an active modifier*/
+.navigation-list__item--active {
+  text-decoration: none;
+}
+
+.button {
+  /* overwrites browser defaults */
+  /* style button */
+  background-color: #3677b8;
+  /* resets the border */
+  border: none;
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  color: #FFF;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  padding: 10px;
+  text-decoration: none;
+  -webkit-transition: 0.2s opacity;
+  -o-transition: 0.2s opacity;
+  transition: 0.2s opacity;
+}
+
+button {
+  /* overwrites browser defaults */
+  /* style button */
+  background-color: #3677b8;
+  /* resets the border */
+  border: none;
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  color: #FFF;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  padding: 10px;
+  text-decoration: none;
+  -webkit-transition: 0.2s opacity;
+  -o-transition: 0.2s opacity;
+  transition: 0.2s opacity;
+}
+
+button:hover, button:focus, .button:hover, .button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  /* cursor: pointer; */
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+
+li {
+  list-style-type: none;
+  margin-left: -2em;                    /* used to remove the space before "Title" text where bullet is absent. */
+}
+
+.main-section-shared {
+  margin: auto;
+  max-width: 1140px;
+
+  padding: 0 15px;
+}
+
+
+/*
+==================================================
+# INDEX PAGE - MAIN SECTION - STYLE #
+==================================================
+*/
+
+.profile {
+  /* border: 1px solid; */
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.profile-content {
+  /* background-color: yellow; */
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.profile-picture, .profile-description {
+  /* border: 2px solid red; */
+  /* float: left; */
+  display: inline-block;
+  margin: 0 auto;
+  vertical-align: top;
+}
+
+.profile-description {
+  text-align: left;
+}
+
+.profile__portrait {
+  border: 3px solid #FFF;
+  border-radius: 50%;
+  max-width: 250px;
+  margin: 0 40px;
+  display: inline-block;
+}
+
+
+/*
+==================================================
+# ABOUT PAGE STYLE #
+==================================================
+*/
+
+.about {
+  text-align: center;
+}
+
+.skills {
+  margin: auto;
+}
+
+@-webkit-keyframes color-change-paris {
+  0% {
+    fill: #fefbd8;
+  }
+  50% {
+    fill: #5585b5;
+  }
+  100% {
+    fill: #f18973;
+  }
+}
+
+@keyframes color-change-paris {
+  0% {
+    fill: #fefbd8;
+  }
+  50% {
+    fill: #5585b5;
+  }
+  100% {
+    fill: #f18973;
+  }
+}
+
+.paris-sky {
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-name: color-change-paris;
+          animation-name: color-change-paris;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.paris-skyline {
+  margin: 30px auto;
+  width: 50%;
+}
+
+
+/*
+==================================================
+# WORK PAGE STYLE #
+==================================================
+*/
+
+
+/* start grid fallback */
+.grid__item {
+ border-radius: 3px;
+ display: inline-block;
+ width: 33%;
+}
+/* end grid fallback */
+
+@supports (display: grid) {
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 0;
+  }
+
+  .grid__item {
+    background-color: white;
+    width: auto;
+    min-height: auto;
+    margin: 0;
+    padding: 10px;
+    border-radius: 3px;
+  }
+
+  .grid__item:last-child {
+    -ms-grid-column: 3;
+    grid-column: 3 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1 / 3;
+  }
+} /* end of @supports (display: grid)*/
+
+/* ## WORK PAGE - media */     /* [Q] - Not sure where this @media section should be? Here or in the shared section? */
+@media all and (max-width: 500px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 501px) and (max-width: 750px) {    /* used 501px instead of 500px otherwise I had some bug */
+  .grid {
+    -ms-grid-columns: 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto/ auto;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 21px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+}
+
+
+/*
+==================================================
+# CONTACT PAGE STYLE #
+==================================================
+*/
+
+.contact {
+  text-align: center;
+}
+
+.contact-form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.standard-label {
+  text-align: left;
+  display: block;
+}
+
+input[type=text],input[type=email], textarea, select {
+  width: 100%;
+  padding: 6px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media all and (max-width: 700px) {
+  .contact-form {
+    width: 100%;
+  }
+}
+
+/*
+==================================================
+# HEADER SECTION STYLE #
+==================================================
+*/
+
+.page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* width: 100px; => Removed otherwise this would break styling */
+  /* justify-content: space-between; */
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 20px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.1);
+          box-shadow: 0 1px 0 rgba(255,255,255,0.1);
+}
+
+.page-header-logo {
+  max-height: 70px;
+  /* margin: 5px; */
+}
+
+.page-header__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 200px;
+          flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; /* as an alternative we may use 0 and have the justify-content: space-between in the .page-header to push this element to the right */
+  text-align: right;
+}
+
+/* .navigation-list {
+  list-style-type: none;
+} */
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.navigation-list__item > a {
+  text-decoration: none;
+}
+
+/* animated navbar */
+.navigation-list__item {
+    color: #FFF;
+    text-decoration: none;
+    font: 20px 'lato', sans-serif;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.pullUp a:before
+{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0px;
+    bottom: 0px;
+    content: '';
+    background: #FFF;
+    opacity: 0.3;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.pullUp a:hover:before
+{
+    height: 100%;
+}
+
+.navigation-list__item--active a:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    bottom: 0px;
+    content: '';
+    background: #FFF;
+    opacity: 0.3;
+}
+
+
+/*
+==================================================
+# FOOTER SECTION STYLE #
+==================================================
+*/
+
+.page-footer {
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
+  margin: 0 auto;
+  margin-top: 50px;
+  max-width: 1140px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+}
