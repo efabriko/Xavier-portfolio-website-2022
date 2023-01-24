@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Best360ies - Case Study</title>
+  </head>
+  <body>
+    <h1 style="text-align: center;">Best360ies Project - Case Study</h1>
+    <p style="text-align: center;">- A collection of 360 panoramic photos -</p>
+
+    <hr />
+
+    <!-- ======== -->
+    <!-- Overview -->
+    <!-- ======== -->
+
+    <h2>Overview</h2>
+    <hr />
+    <p>
+      Best360ies is a <b>web app</b>, developed using the <b>MERN stack</b>,
+      that provides users with the possibility to see some of the world’s
+      <b>best panoramic photos</b>. Users are able to create an account, update
+      their personal data, and create a list of favorite 360ies.
+    </p>
+
+    <div style="text-align:center;">
+      <img
+      class=""
+      src="img/case_studies/best360ies/image001.png"
+      alt="Git icon"
+      width="50%"
+    />
+    </div>
+    
+
+    <!-- ======== -->
+    <!-- Purpose & Context -->
+    <!-- ======== -->
+
+    <h2>Purpose & Context</h2>
+    <hr />
+    <p>
+      Best360ies was a <b>personal project</b> developed in addition to my <b>full stack
+      web development course</b> at CareerFoundry to demonstrate my <b>mastery of
+      full-stack JavaScript development</b>.
+    </p>
+
+    <p>
+      This project also aims at <b>sharing my passion for discovering diverse
+      places worldwide</b> and could serve as a tool for users to <b>enjoy</b> and <b>learn
+      about amazing locations</b>.
+    </p>
+
+    <!-- ======== -->
+    <!-- Objective -->
+    <!-- ======== -->
+
+    <h2>Objective</h2>
+    <hr />
+    <p>
+      The aim of the project was to have <b>unique</b> and <b>ambitious</b> full-stack project
+      I can add to my professional portfolio. This project should also <b>help me
+      with bookmarking my favorite 360ies</b>. Indeed while google map is a great
+      tool for browsing panoramic photos, <b>I could not find a suitable solution
+      to build and share a collection of 360ies I liked</b>.
+    </p>
+    <p>
+      The problem I wanted to solve is to build the complete server-side and
+      client-side for the application from scratch.
+    </p>
+    <p>The user’s stories of the Project can be found below:</p>
+
+    <ul>
+      <li>
+        As a user, I want to <b>be able to browse a collection of 360 panoramic
+        photos</b>, access to information on 360 panoramic photos such as country,
+        area name, link to the 360 view on google maps so I can <b>discover
+        interesting places from around the world</b>.
+      </li>
+      <li>
+        As a User, I want to be able to <b>create a profile</b> so I can <b>save data
+        about my favorite 360 panoramic photos and hence create a sort of
+        personal collection of 360 panoramic photos</b>.
+      </li>
+      <li>
+        As a User, I want to be <b>able search into the 360 panoramic photos
+        collection</b> using the <b>search bar</b> so that I can <b>select only the 360
+        panoramic photos related to a specific area</b>.
+      </li>
+    </ul>
+
+    <!-- ======== -->
+    <!-- Tools -->
+    <!-- ======== -->
+
+    <h2>Tools</h2>
+    <hr />
+    <table style="border: 1px solid black; border-collapse:collapse;">
+      <tr>
+        <th style="border: 1px solid black; padding: 0 10px 0 10px">API development</th>
+        <th style="border: 1px solid black; padding: 0 10px 0 10px">Client development</th>
+        <th style="border: 1px solid black; padding: 0 10px 0 10px">Further Developments (see below for details)</th>
+      </tr>
+      <tr>
+        <td style="vertical-align: top; border: 1px solid black;">
+          <ul>
+            <li>Express</li>
+            <li>Bcrypt</li>
+            <li>JWT</li>
+            <li>Passport</li>
+            <li>Mongoose</li>
+            <li>Postman</li>
+          </ul>
+        </td>
+        <td style="vertical-align: top; border: 1px solid black;">
+          <ul>
+            <li>React</li>
+            <li>Redux</li>
+            <li>React Bootstrap</li>
+          </ul>
+        </td>
+        <td style="vertical-align: top;">
+          <ul>
+            <li>Geojson-places</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+
+    <!-- ======== -->
+    <!-- Project structure and key components -->
+    <!-- ======== -->
+
+    <h2>Project structure and key components</h2>
+    <hr />
+    <p>
+      Best360ies Project consists of <b>an API (best360ies-api)</b> as well as <b>a
+      Frontend App (best360ies-client-react)</b> built using React library.
+    </p>
+
+    <h3>Server-side (best360ies-api)</h3>
+    <p>
+      I created a <b>RESTful API</b> using <b>Node.js</b> and <b>Express</b>, that interacts with a
+      non-relational database <b>(MongoDB)</b>. The API can be accessed via commonly
+      used HTTP methods like GET or POST. To retrieve data from and store data
+      in the database, CRUD methods are used. The API provides panoramic photos
+      (Panos) information in <b>JSON format</b>.
+    </p>
+
+    <table style="text-align:center;">
+      <tr>
+        <td>
+          <img
+            class=""
+            src="img/case_studies/best360ies/image002.png"
+            alt="Git icon"
+            width="100%"
+          />
+        </td>
+        <td>
+          <img
+            class=""
+            src="img/case_studies/best360ies/image003.png"
+            alt="Git icon"
+            width="70%"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td><u>JSON Pano Object returned by the API</u></td>
+        <td><u>View endpoints and API documentation</u></td>
+      </tr>
+    </table>
+
+    <p>
+      To test the API, I used <b>Postman</b>. I also included user <b>authentication</b> and
+    <b>authorization</b> code in the form of basic HTTP authentication and <b>JWT
+      authentication</b>. There is a possibility to add (POST) new Panos which is
+      accessible only to a User registered the Admin role. This role is
+      accessible through the created JWT Token.
+    </p>
+
+    <table style="text-align:center;">
+      <tr>
+        <td>
+          <img
+            class=""
+            src="img/case_studies/best360ies/image004.png"
+            alt="Git icon"
+            width="50%"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td><u>Postman view</u></td>
+      </tr>
+    </table>
+
+    <h3>Client-side (best360ies-client-react)</h3>
+    <p>
+      After completing the API, I started to build the interface users would
+      need when making requests to, and receiving responses from, the
+      server-side. It is a responsive application, developed with
+    <b>React</b> and <b>React-Redux</b>. It provides several interface views, including, but
+      not limited to, a main view (shows a list of all panoramic photos), single
+      panoramic photo view (shows data about a single panoramic photo and allows
+      users to add the panoramic photo to their list of favorites), a login
+      view, a registration view and a profile view (where users can update their
+      user data and list of favorites).
+    </p>
+
+    <table  style="text-align:center;">
+      <tr>
+        <td>
+          <img
+            class=""
+            src="img/case_studies/best360ies/image005.png"
+            alt="Git icon"
+            width="50%"
+          />
+        </td>
+        <td>
+          <img
+            class=""
+            src="img/case_studies/best360ies/image006.png"
+            alt="Git icon"
+            width="50%"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td><u>Login view</u></td>
+        <td><u>Single Pano View</u></td>
+      </tr>
+    </table>
+
+    <br />
+    <table style="text-align:center;">
+      <tr>
+        <td>
+          <img
+            class=""
+            src="img/case_studies/best360ies/image007.png"
+            alt="Git icon"
+            width="50%"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td><u>User Profile view</u></td>
+      </tr>
+    </table>
+
+    <!-- ======== -->
+    <!-- Challenges -->
+    <!-- ======== -->
+
+    <h2>Challenges</h2>
+    <hr />
+    <p>
+      This was my favorite project because I really <b>enjoy the MERN stack</b> and
+      also because of the Project itself that I <b>hope users will love using</b> as
+      much as I loved building and using it. Thanks to this side Project I could
+      get a great understanding of how to build an API and interface it with the
+      Client side. I could also get more confidence using React and in
+      particular how States and Props are working along with Redux.
+    </p>
+
+    <!-- ======== -->
+    <!-- Duration -->
+    <!-- ======== -->
+
+    <h2>Duration</h2>
+    <hr />
+    <p>
+      Thanks to the development of previous web applications based on the MERN
+      stack, I could develop an MVP version of the full Project (back and front)
+      within <b>3 weeks</b>.
+    </p>
+
+
+    <!-- ======== -->
+    <!-- Further developments -->
+    <!-- ======== -->
+
+    <h2>Further developments</h2>
+    <hr />
+    <p>
+      In addition to the mentioned earlier development, I have initiated the following next steps of the development of this App:
+      <ul>
+
+        <li>
+          The implementation of a <b>rating system</b> that allows registered users to rate the panoramic photos they like. The average rating will then be displayed on the panoramic photo
+        </li>
+        <li>An <b>Admin version of the Client side</b> of the project that gives the Admin the possibility to <b>add a new panoramic photo entry</b> into the database along with associated data such as the 360 static image url, the country where the 360 was taken etc... <b>automatically</b> using JavaScript code as well as some <b>third party API</b> to implement the necessary <b>reverse geocoding functionality</b>.</li>
+      </ul>
+
+    </p>
+
+      <!-- ======== -->
+    <!-- Links to the Project Repositories on GitHub -->
+    <!-- ======== -->
+
+    <h2>Links to the Project Repositories on GitHub</h2>
+    <hr />
+
+      <ul>
+
+        <li>
+          Link to the <a href="https://github.com/xavsln/best360ies-api" target="_blank">best360ies-api</a> repository on GitHub
+        </li>
+        <li>Link to the <a href="https://github.com/xavsln/best360ies-client-react" target="_blank">best-360ies-client</a> repository on GitHub</li>
+      </ul>
+
+ 
+
+
+    <hr />
+  </body>
+</html>
