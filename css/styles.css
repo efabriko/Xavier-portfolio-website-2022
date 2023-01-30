@@ -17,17 +17,13 @@
   --secondary-font-nav-links-color: #3677b8; /* Navbar hover links color */
 
   --portrait-border-color: #fff;
+  --portrait-bg-color: #3677b8;
 
   /* Color - Buttons */
   --button-primary-color: #3677b8;
   --button-secondary-color: #e0b354;
   --button-primary-font-color: #fff;
   --button-secondary-font-color: #2b2b2b;
-
-  /* Color - Illustration Paris */
-  /* --color-illustration-paris-0: #fefbd8;
-  --color-illustration-paris-50: #5585b5;
-  --color-illustration-paris-100: #f18973; */
 
   /* Font */
   --font-family-style: "lato", sans-serif;
@@ -50,7 +46,6 @@
   width: 100%;
   height: 90px;
   position: fixed;
-  /* background-color: white; */
   background-color: var(--bg-color-body-secondary);
   padding: 0px;
   box-shadow: 0 5px 10px rgb(146 161 176 / 15%);
@@ -247,10 +242,6 @@ button:focus,
   opacity: 0.8;
 }
 
-/* .section-container-shared {
-  background-color: yellow;
-} */
-
 .main-section-shared {
   /* background-color: yellow; */
   width: 100%;
@@ -267,35 +258,22 @@ button:focus,
 */
 
 .profile-section {
-  /* background-color: white; */
-  /* border: 1px solid; */
-  /* margin: 20px auto; */
-  /* max-width: 800px; */
-  /* padding: 0 15px; */
   text-align: center;
-  /* margin: auto; */
-  /* max-width: var(--screen-max-width); */
   margin-top: 80px;
-
   padding: 50px 0px;
   min-height: 88vh;
 }
 
 .profile-content {
-  /* background-color: yellow; */
   display: inline-block;
   margin: 0 auto;
   text-align: center;
   margin: auto;
   max-width: var(--screen-max-width);
-
-  padding: 0 15px;
 }
 
 .profile-picture,
 .profile-description {
-  /* border: 2px solid red; */
-  /* float: left; */
   display: inline-block;
   margin: 0 auto;
   vertical-align: top;
@@ -314,6 +292,7 @@ button:focus,
   display: inline-block;
   width: 100%;
   height: auto;
+  background-color: var(--portrait-bg-color);
 }
 
 .profile-description-buttons {
@@ -339,6 +318,13 @@ button:focus,
   width: auto;
   height: 35px;
   margin: 10px 5px 10px 0px;
+}
+
+@media only screen and (max-width: 768px) {
+  .profile-picture,
+  .profile-description {
+    max-width: 90%;
+  }
 }
 
 /*
@@ -410,35 +396,6 @@ button:focus,
   font-style: italic;
 }
 
-/* .skills {
-  margin: auto;
-} */
-
-/* @keyframes color-change-paris {
-  0% {
-    fill: var(--color-illustration-paris-0);
-  }
-  50% {
-    fill: var(--color-illustration-paris-50);
-  }
-  100% {
-    fill: var(--color-illustration-paris-100);
-  }
-} */
-
-/* .paris-sky {
-  animation-duration: 5s;
-  animation-name: color-change-paris;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-}
-
-.paris-skyline {
-  margin: 30px auto;
-  width: 50%;
-} */
-
 /*
 ==================================================
 # DEV. STACK SECTION STYLE #
@@ -446,15 +403,8 @@ button:focus,
 */
 
 .devstack-section {
-  /* background-color: white; */
-  /* border: 1px solid; */
-  /* margin: 20px auto; */
-  /* max-width: 800px; */
-  /* padding: 0 15px; */
   text-align: center;
   margin: auto;
-  /* max-width: var(--screen-max-width); */
-
   padding: 0 15px;
 }
 
@@ -479,7 +429,6 @@ button:focus,
 .devstack-card-list {
   margin-top: 0;
   list-style-type: square;
-  /* color: blue; */
 }
 
 .devstack-card-list {
@@ -551,14 +500,9 @@ button:focus,
     /* box-shadow: 5px 5px 5px #475569; */
     box-shadow: 0.8px 0.9px 3px #475569;
   }
-
-  /* .grid__item:last-child {
-    grid-column: 3 / 3;
-    grid-row: 1 / 3;
-  } */
 } /* end of @supports (display: grid)*/
 
-/* ## WORK PAGE - media */ /* [Q] - Not sure where this @media section should be? Here or in the shared section? */
+/* ## WORK PAGE - media */
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
@@ -566,18 +510,12 @@ button:focus,
 }
 
 @media all and (min-width: 501px) and (max-width: 750px) {
-  /* used 501px instead of 500px otherwise I had some bug */
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media all and (max-width: 750px) {
-  /* .grid__item:last-child {
-    grid-column: auto / auto;
-    grid-row: auto/ auto;
-  } */
-
   /* h1 {
     font-size: 26px;
   } */
@@ -598,29 +536,17 @@ button:focus,
 */
 
 .contact-section {
-  /* background-color: white; */
-  /* border: 1px solid; */
-  /* margin: 20px auto; */
-  /* max-width: 800px; */
-  /* padding: 0 15px; */
   text-align: center;
   margin: auto;
-  /* max-width: var(--screen-max-width); */
-
-  padding: 0 15px 30px 0;
+  padding: 0 15px 30px 15px;
   scroll-margin-top: 80px;
 }
 
 .contact-content-left,
 .contact-content-right {
-  /* border: 2px solid red; */
-  /* float: left; */
   display: inline-block;
   margin: 0 auto;
   vertical-align: top;
-  /* width: 340px; */
-  /* background-color: #5585b5; */
-  /* max-width: 33%; */
   min-width: 200px;
 }
 
@@ -629,7 +555,7 @@ button:focus,
 }
 
 .contact-form {
-  width: 50%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -664,28 +590,8 @@ select {
 */
 
 .page-header {
-  /* display: flex; */
-  /* width: 100px; => Removed otherwise this would break styling */
-  /* justify-content: space-between; */
-  /* margin: 0 auto; */
-  /* max-width: var(--screen-max-width); */
-  /* padding: 20px; */
-  /* border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1); */
-
   width: 100%;
-  /* display: flex; */
-  /* align-items: center; */
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  /* background-color: white; */
-  /* height: 80px; */
 }
-
-/* .page-header-logo {
-  max-height: 70px;
-
-} */
 
 .page-header__item {
   flex: 0 1 200px;
@@ -695,10 +601,6 @@ select {
   flex-grow: 1; /* as an alternative we may use 0 and have the justify-content: space-between in the .page-header to push this element to the right */
   text-align: right;
 }
-
-/* .navigation-list {
-  list-style-type: none;
-} */
 
 .navigation-list li {
   display: inline-block;
@@ -754,19 +656,6 @@ select {
 ==================================================
 */
 
-/* .page-footer {
-  clear: both;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  flex-basis: 200px;
-  margin: 0 auto;
-  margin-top: 50px;
-  max-width: var(--screen-max-width);
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-} */
-
 .footer-container {
   width: 100%;
   display: flex;
@@ -782,12 +671,14 @@ select {
   display: flex;
   max-width: var(--screen-max-width);
   align-items: center;
-  padding-top: var(--dl-space-space-tripleunit);
-  padding-left: var(--dl-space-space-tripleunit);
-  padding-right: var(--dl-space-space-tripleunit);
+  padding-left: 10px;
+  padding-right: 10px;
   flex-direction: row;
-  padding-bottom: var(--dl-space-space-tripleunit);
   justify-content: space-between;
+}
+
+.footer img {
+  display: block;
 }
 
 .footer-social-links {
@@ -806,7 +697,6 @@ select {
   display: flex;
   align-items: center;
   flex-direction: row;
-  padding-right: 10px;
 }
 
 .footer-copyright-container p {
