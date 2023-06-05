@@ -398,11 +398,24 @@ button:focus,
 
 /*
 ==================================================
+# PRODUCT MANAGEMENT SECTION STYLE #
+==================================================
+*/
+
+.product-management-section {
+  text-align: center;
+  margin: auto;
+  padding: 0 15px;
+}
+
+/*
+==================================================
 # DEV. STACK SECTION STYLE #
 ==================================================
 */
 
 .devstack-section {
+  background-color: white;
   text-align: center;
   margin: auto;
   padding: 0 15px;
@@ -449,8 +462,20 @@ button:focus,
 ==================================================
 */
 
-.portfolio-section {
+.portfolio-section-blockchain {
   background-color: white;
+}
+
+.grid-item-blockchain {
+  background-color: white;
+}
+
+.portfolio-section-fullstack {
+  background-color: white;
+}
+
+.portfolio-section {
+  /* background-color: white; */
   text-align: center;
   margin: auto;
 
